@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gon🕉️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+            color: #A020F0;
+            background: linear-gradient(45deg, #1c1c1c, #0a0a0a);
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #1c1c1c; }
+            100% { background-color: #2c2c2c; }
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 0 0 10px rgba(160, 32, 240, 0.7);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #701198;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(50, 50, 50, 0.8);
+            box-shadow: 0 0 20px rgba(160, 32, 240, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            transition: background-color 0.3s;
+        }
+
+        pre:hover {
+            background-color: #444;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #A020F0;
+        }
+
+        ul li {
+            position: relative;
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        ul li:nth-child(1) { animation-delay: 0.2s; }
+        ul li:nth-child(2) { animation-delay: 0.4s; }
+        ul li:nth-child(3) { animation-delay: 0.6s; }
+        ul li:nth-child(4) { animation-delay: 0.8s; }
+
+        .discord-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: #A020F0;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            position: relative;
+            text-shadow: 0 0 5px rgba(160, 32, 240, 1), 0 0 10px rgba(160, 32, 240, 0.8);
+            animation: neonPulse 1.5s infinite alternate;
+        }
+
+        @keyframes neonPulse {
+            0% {
+                text-shadow: 0 0 5px rgba(160, 32, 240, 1), 0 0 10px rgba(160, 32, 240, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(160, 32, 240, 1), 0 0 20px rgba(160, 32, 240, 0.6);
+            }
+        }
+
+        .falling-flower {
+            position: absolute;
+            background: rgba(160, 32, 240, 0.8);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fall 5s linear infinite;
+            transform-origin: center;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .rain-drop {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: rgba(173, 216, 230, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: rain-fall 1.5s linear infinite;
+        }
+
+        @keyframes rain-fall {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
+
+        .click-effect {
+            position: absolute;
+            background: rgba(160, 32, 240, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: scale(0);
+            animation: ripple 0.6s linear forwards;
+        }
+
+        @keyframes ripple {
+            to { transform: scale(5); opacity: 0; }
+        }
+
+        iframe {
+            display: none; /
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>Yank the sanct</h1>
+    <h2> Sempre acima de vocês </h2>
+    
+    <p>Se você pensa pequeno, sequer tente.</p>
+
+    <h3>Skills:</h3>
+    <ul>
+        <li>Programação em python & html</li>
+        <li>Engenharia social</li>
+        <li>Sistemas Operacionais</li>
+        <li>OSINT</li>
+    </ul>
+
+    <h3>死んだ人</h3>
+    <pre>私の最大の恐怖は自分の反射です</pre>
+
+    <h3>💣</h3>
+    <ul>
+        <li>
+            <strong>Gonxt9</strong> Discord
+            <a href="https://discord.gg/piracyy" class="discord-button">Entrar no Servidor</a>
+        </li>
+    </ul>
+
+    <footer>
+        &copy;  Tudo deles nada nosso
+    </footer>
+</div>
+
+<iframe 
+    width="0" 
+    height="0" 
+    src="https://www.youtube.com/embed/ArHSMbhjLiE?autoplay=1&controls=0&loop=1&playlist=ArHSMbhjLiE" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen
+></iframe>
+
+<script>
+    const createFlower = () => {
+        const flower = document.createElement('div');
+        flower.className = 'falling-flower';
+        flower.style.left = Math.random() * 100 + 'vw';
+        flower.style.animationDuration = Math.random() * 3 + 3 + 's';
+        flower.style.opacity = Math.random();
+        document.body.appendChild(flower);
+
+        setTimeout(() => {
+            flower.remove();
+        }, 8000);
+    };
+
+    const createRainDrop = () => {
+        const rainDrop = document.createElement('div');
+        rainDrop.className = 'rain-drop';
+        rainDrop.style.left = Math.random() * 100 + 'vw';
+        rainDrop.style.animationDuration = Math.random() * 2 + 1 + 's';
+        document.body.appendChild(rainDrop);
+
+        setTimeout(() => {
+            rainDrop.remove();
+        }, 3000);
+    };
+
+    document.addEventListener('click', (event) => {
+        const clickEffect = document.createElement('div');
+        clickEffect.className = 'click-effect';
+        clickEffect.style.left = event.clientX + 'px';
+        clickEffect.style.top = event.clientY + 'px';
+        document.body.appendChild(clickEffect);
+
+        setTimeout(() => {
+            clickEffect.remove();
+        }, 600);
+    });
+
+    setInterval(createFlower, 500);
+    setInterval(createRainDrop, 200); 
+</script>
+
+</body>
+</html>
